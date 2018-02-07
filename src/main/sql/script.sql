@@ -28,6 +28,6 @@ CREATE TABLE success_seckill(
 `user_phone` bigint NOT NULL COMMENT '用户电话',
 `state` tinyint DEFAULT -1 COMMENT '0成功，-1无效，1已付款，2发货，',
 `create_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-PRIMARY KEY(seckill_id,user_phone),
+PRIMARY KEY(seckill_id,user_phone),--联合主键
 key idx_create_time(create_time)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='秒杀成功明细表';

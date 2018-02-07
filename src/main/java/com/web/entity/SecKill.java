@@ -1,4 +1,6 @@
-package com.web.seu.entity;
+package com.web.entity;
+
+import java.util.Date;
 
 public class SecKill {
     private long seckillId;

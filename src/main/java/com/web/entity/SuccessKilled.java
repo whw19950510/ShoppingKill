@@ -1,5 +1,7 @@
-package com.web.seu.entity;
-import con.web.seu.*;
+package com.web.entity;
+
+import java.util.Date;
+
 public class SuccessKilled {
     private long seckill_id;
     private long Userphone;
@@ -7,7 +9,7 @@ public class SuccessKilled {
     private Date createTime;
 
     //多对一，映射关系，秒杀多个商品对应的那个商品类别
-    private Seckill seckill;
+    private SecKill seckill;
     public long getSeckill_id() {
         return seckill_id;
     }
