@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.web.seu.dao.SuccessKilledDAO">
+<mapper namespace="com.web.dao.SuccessKilledDAO">
     <insert id="insertSuccessKilled">
         INSERT ignore INTO success_seckill (seckill_id,user_phone,state) VALUES (#{successkilledId},#{userPhone},0)
 --         如果主键重复，应该忽略当前语句，并返回0.
@@ -10,7 +10,7 @@
     <select id="queryByIdWithSeckill">
 --         根据id查询successKill并携带seckill实体,怎样映射到Mybatis
         SELECT sk.seckill_id,sk.user_phone,sk.create_time,sk.state,s.seckill_id "seckill.seckill_id",s.name "seckill.name",s.number "seckill.number",s.start_time "seckill.start_time",s.end_time "seckill.end_time",s.create_time "seckill.create_time"
-        FROM success_seckill ak INNER JOIN sec_kill s ON sk.seckill_id=s.seckill_id WHERE sk.seckill_id=#{successkilledId} AND sk.user_phone = #{userPhone}
+        FROM success_seckill sk INNER JOIN sec_kill s ON sk.seckill_id=s.sec_id WHERE sk.seckill_id=#{successkilledId} AND sk.user_phone = #{userPhone}
     </select>
 
 </mapper>

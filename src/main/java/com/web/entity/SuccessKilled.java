@@ -10,6 +10,7 @@ public class SuccessKilled {
 
     //多对一，映射关系，秒杀多个商品对应的那个商品类别
     private SecKill seckill;
+
     public long getSeckill_id() {
         return seckill_id;
     }

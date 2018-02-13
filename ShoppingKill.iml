@@ -11,6 +11,8 @@
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+          <root url="file://$MODULE_DIR$/src/main/resources/script" relative="/resources/script" />
+          <root url="file://$MODULE_DIR$/src/main/resources/css" relative="/resources/css" />
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
